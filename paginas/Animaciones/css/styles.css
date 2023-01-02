@@ -1,0 +1,66 @@
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    width: 100%;
+    background:url(https://th.bing.com/th/id/R.4c037d54657ccecc417c5d77a90ae45a?rik=nnOK%2f%2bvSD9Flzw&riu=http%3a%2f%2fwww.puntogeek.com%2fwp-content%2fuploads%2f2012%2f12%2fjanuary-13-mario_january__35-nocal-1280x720.png&ehk=Z6PCDxK8vPSUmd0CcZcEo%2bdlE6XEiowf7c%2fJKb%2fu6jg%3d&risl=&pid=ImgRaw&r=0);
+    font-family:'Times New Roman', Times, serif;
+}
+
+div#container{
+    position: relative;
+    height: 50vh;
+    z-index: 1;
+}
+
+div#blockContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+}
+#mario{
+    width: 150px;
+    right: 0px;
+    z-index: 1;
+    margin-top: 450px;
+}
+#block{
+    width: 100px;
+    z-index: 2;
+    opacity: 1;
+    animation: jump 0.6s linear infinite alternate;
+}
+
+#coin{
+    width: 70px;
+    z-index: 1;
+    position: relative;
+    right: 85px;
+    bottom: 90px;
+    animation: coin 0.9s linear infinite forwards;
+}
+@keyframes jump {
+    0% {transform: translateY(0px);}
+    50% {transform: translateY(-10px);}
+    100% {transform: translateY(0px);}
+}
+
+
+@keyframes coin{
+    0% {
+    transform:translateY(0px) rotateY(0deg);
+    opacity: 1;
+    }
+    50% {transform:translateY(-100px) rotateY(180deg);
+        opacity: 0;
+    }
+    100% {
+        transform:translateY(-100px) rotateY(360deg);
+        opacity: 0;
+    }
+}
